@@ -31,9 +31,52 @@ func main(){
 
 How to run the code:
 
-``` First get into the respective folder having go file, then run the below command```
+```First get into the respective folder having go file, then run the below command```
 
 ``` bash 
 go run main.go
 ```
 
+## Chapter 3:
+
+Here we looked upon simple values & printed them on the page
+
+Code Block:
+
+``` bash
+package main
+
+import (
+	"fmt"
+)
+
+func main(){
+	// Chapter 3
+
+	// Simple Values
+
+	// Integer
+	fmt.Println(1+1)
+
+	// Strings
+	fmt.Println("Hello Golang")
+
+	// Booleans
+	fmt.Println(true)
+	fmt.Println(false)
+
+	//Floats
+	fmt.Println(10.58)
+
+	// Division
+	fmt.Println(14.0/7.0)
+}
+```
+
+How to run the code:
+
+```First get into the respective folder having go file, then run the below command```
+
+``` bash 
+go run main.go
+```
