@@ -4,8 +4,7 @@
 
 ### Link to Playlist: [Happy Coding](https://www.youtube.com/playlist?list=PLXQpH_kZIxTWUe-Ee-DZEX5gfeoo4tHV6)
 
-
-##  Chapter 1:
+## Chapter 1:
 
 Installing Golang
 
@@ -19,6 +18,7 @@ sudo apt install golang -y
 Hello World Application
 
 Code Block:
+
 ```bash
 package main
 
@@ -31,19 +31,19 @@ func main(){
 
 How to run the code:
 
-```First get into the respective folder having go file, then run the below command```
+`First get to the respective folder having go file, then run the below command`
 
-``` bash 
+```bash
 go run main.go
 ```
 
 ## Chapter 3:
 
-Here we looked upon simple values & printed them on the page
+In this chapter we look up on simple values
 
 Code Block:
 
-``` bash
+```bash
 package main
 
 import (
@@ -75,19 +75,19 @@ func main(){
 
 How to run the code:
 
-```First get into the respective folder having go file, then run the below command```
+`First get to the respective folder having go file, then run the below command`
 
-``` bash 
+```bash
 go run main.go
 ```
- 
+
 ## Chapter 4:
 
-Here we focus on Different varibales (int, bool, string), shorthand syntax  & types of variables like int32, int 64 etc
+In this chapter we focus on different varibales (int, bool, string), shorthand syntax & types of variables like int32, int 64 etc.
 
 Code Block:
 
-``` bash
+```bash
 package main
 
 import (
@@ -96,7 +96,7 @@ import (
 
 func main(){
 	// var name string = "Aditya"
-	
+
 	// Golang Infers the name type
 	// var name = "Aditya"
 	// fmt.Println("Hello",name)
@@ -128,10 +128,48 @@ func main(){
 	fmt.Println(price3)
 }
 ```
- How to run the code:
 
-```First get into the respective folder having go file, then run the below command```
+How to run the code:
 
-``` bash 
+`First get to the respective folder having go file, then run the below command`
+
+```bash
 go run variables.go
+```
+
+## Chapter 5:
+
+In this chapter we look upon constants & it's way of writing.
+
+Code Block:
+
+```bash
+package main
+
+import "fmt"
+
+const age = 23
+const name = "aditya"
+
+
+func main(){
+	const name = "Aditya"
+	// name = "Adi"  (Will give an err as constants cannot be changed)
+	fmt.Println(name)
+	fmt.Println(age)
+
+	const (
+		short_name = "adi"
+		age = 21
+	)
+	fmt.Println(short_name)
+}
+```
+
+How to run the code:
+
+`First get to the respective folder having go file, then run the below command`
+
+```bash
+go run constants.go
 ```
