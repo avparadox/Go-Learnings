@@ -2,9 +2,14 @@
 
 ![Image](./image//YmGp5Uzh4ag-HD.jpg)
 
-### Link to Playlist: [Happy Coding](https://www.youtube.com/playlist?list=PLXQpH_kZIxTWUe-Ee-DZEX5gfeoo4tHV6)
+### Link to Playlist: [All the Best](https://www.youtube.com/playlist?list=PLXQpH_kZIxTWUe-Ee-DZEX5gfeoo4tHV6)
 
-## Chapter 1:
+## Notes
+
+<details>
+<summary>
+Chapter 1 - Installing
+</summary>
 
 Installing Golang
 
@@ -13,7 +18,12 @@ sudo apt update
 sudo apt install golang -y
 ```
 
-## Chapter 2:
+</details>
+
+<details>
+<summary>
+Chapter 2 - Hello World
+</summary>
 
 Hello World Application
 
@@ -37,8 +47,12 @@ How to run the code:
 go run main.go
 ```
 
-## Chapter 3:
+</details>
 
+<details>
+<summary>
+Chapter 3 - Simple Values
+</summary>
 In this chapter we look up on simple values
 
 Code Block:
@@ -81,7 +95,12 @@ How to run the code:
 go run main.go
 ```
 
-## Chapter 4:
+</details>
+
+<details>
+<summary>
+Chapter 4 - Type of variables
+</summary>
 
 In this chapter we focus on different varibales (int, bool, string), shorthand syntax & types of variables like int32, int 64 etc.
 
@@ -137,8 +156,12 @@ How to run the code:
 go run variables.go
 ```
 
-## Chapter 5:
+</details>
 
+<details>
+<summary>
+Chapter 5 - Constants in golang
+</summary>
 In this chapter we look upon constants & it's way of writing.
 
 Code Block:
@@ -173,8 +196,13 @@ How to run the code:
 ```bash
 go run constants.go
 ```
-## Chapter 6:
 
+</details>
+
+<details>
+<summary>
+Chapter 6 - For Loops
+</summary>
 In this chapter we look upon For Loops & Range in Golang.
 
 Code Block:
@@ -212,5 +240,8 @@ func main(){
         println("This number is", i)
     }
 }
-
 ```
+
+</details>
+
+## Happy Coding :)
