@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	// age := 16
-	// if age >= 18 {
-	// 	fmt.Println("Person is an adult.")
-	// } else{
-	// 	fmt.Println(("Person is not an adult"))
-	// }
+	age := 19
+	if age >= 18 {
+		fmt.Println("Person is an adult.")
+	} else{
+		fmt.Println(("Person is not an adult"))
+	}
 
 	marks := 98
 	if marks >= 90 {
@@ -22,4 +22,28 @@ func main() {
 	} else{
 		fmt.Println("Fail!")
 	}
-}
+
+	var role = "Admin"
+	var perMissions = false
+
+	// || Or Condition , && AND Condition
+	if role == "Admin" && perMissions {
+		fmt.Println("User is an admin")
+	}else{
+		println("User is not an admin")
+	}
+
+
+	// Scoped Vars (Top wala)
+	if age:= 20; age >= 18 {
+		println("Person is an adult")
+		println(age)
+	}else{
+		println("NAH")
+	}
+
+	// Gloabl age 
+	println(age)
+
+	// Go doesn't have ternary operator
+}	
