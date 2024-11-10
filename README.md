@@ -8,7 +8,7 @@
 
 <details>
 <summary>
-Chapter 1 - Installing
+Chapter 0 - Installing
 </summary>
 
 Installing Golang
@@ -22,7 +22,7 @@ sudo apt install golang -y
 
 <details>
 <summary>
-Chapter 2 - Hello World
+Chapter 1 - Hello World
 </summary>
 
 Hello World Application
@@ -51,7 +51,7 @@ go run main.go
 
 <details>
 <summary>
-Chapter 3 - Simple Values
+Chapter 2 - Simple Values
 </summary>
 In this chapter we look up on simple values
 
@@ -99,7 +99,7 @@ go run main.go
 
 <details>
 <summary>
-Chapter 4 - Type of variables
+Chapter 3 - Type of variables
 </summary>
 
 In this chapter we focus on different varibales (int, bool, string), shorthand syntax & types of variables like int32, int 64 etc.
@@ -160,7 +160,7 @@ go run variables.go
 
 <details>
 <summary>
-Chapter 5 - Constants in golang
+Chapter 4 - Constants in golang
 </summary>
 In this chapter we look upon constants & it's way of writing.
 
@@ -201,7 +201,7 @@ go run constants.go
 
 <details>
 <summary>
-Chapter 6 - For Loops
+Chapter 5 - For Loops
 </summary>
 In this chapter we look upon For Loops & Range in Golang.
 
@@ -247,7 +247,7 @@ func main(){
 
 <details>
 <summary>
-Chapter 7 - If Else
+Chapter 6 - If Else
 </summary>
 
 In this chapter we look up on If Else, Else if, Condition Operators & Scopes for varibales.
