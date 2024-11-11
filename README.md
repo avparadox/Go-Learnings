@@ -241,9 +241,7 @@ func main(){
     }
 }
 ```
-
 </details>
-
 
 <details>
 <summary>
@@ -254,7 +252,7 @@ In this chapter we look up on If Else, Else if, Condition Operators & Scopes for
 
 Code Block:
 
-``` bash
+```bash
 package main
 
 import "fmt"
@@ -299,13 +297,14 @@ func main() {
 		println("NAH")
 	}
 
-	// Gloabl age 
+	// Gloabl age
 	println(age)
 
 	// Go doesn't have ternary operator
-}	
+}
 
 ```
+
 </details>
 
 <details>
@@ -317,7 +316,7 @@ In this chapter, we look up on Normal, Mutliple Condition & Type Switch Statemen
 
 Code Block:
 
-``` bash
+```bash
 package main
 
 import (
@@ -352,7 +351,7 @@ func main(){
 	whoAmI := func (i interface{})  {
 		switch i.(type){
 		case int:
-			println("It is an interger")		
+			println("It is an interger")
 		case string:
 			println("it is a string")
 		case bool:
@@ -362,7 +361,70 @@ func main(){
 	}
 }
 whoAmI("Aditya")
-} 
+}
 ```
+</details>
+
+<details>
+<summary>
+Chapter 8 - Arrays
+</summary>
+
+In this chapter, we look upon Arrays in Golang
+
+Code Block:
+
+```bash
+package main
+
+import "fmt"
+
+func main(){
+
+	// Zero Values Init mai
+	// String => "", Int => 0, Boolean => false
+
+	var nums [4]int
+
+	// println(len(nums))
+	nums[1] = 25;
+
+	println(nums[1])
+
+	// println(nums) // Gives error
+	fmt.Println(nums) // Works because of fmt lib
+
+	// False Values Init mai
+	var vals[4]bool
+	fmt.Println(vals)
+	vals[2] = true;
+	fmt.Println(vals)
+
+
+	// Strings
+	var names[3]string
+	fmt.Println(names)
+	names[0] = "golang"
+	fmt.Println(names)
+
+	// Adding elements while declaration
+	number:=[3]int{1,2,3}
+	fmt.Println(number)
+
+
+	// 2D Arrays
+	numbers := [2][2]int{{1,2},{3,4}}
+	fmt.Println(numbers)
+
+
+	// Usage:
+	// - fixed size arrays only
+	// - memory optimization
+	// - constant time access
+}
+
+```
+
+</details>
 
 ## Happy Coding :)
