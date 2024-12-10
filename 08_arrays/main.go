@@ -22,9 +22,9 @@ func main(){
 	// fmt.Println(nums) // Works because of fmt lib
 
 	// False Values Init mai
-	var vals[4]bool
+	// var vals[4]bool
 	// fmt.Println(vals)
-	vals[2] = true;
+	// vals[2] = true;
 	// fmt.Println(vals)
 
 
