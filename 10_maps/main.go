@@ -57,5 +57,3 @@ func main(){
 
 	fmt.Println(maps.Equal(m4,m5))
 }
-
-
