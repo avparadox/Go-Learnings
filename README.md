@@ -1,6 +1,6 @@
 # Coder's Gyan Golang Series
 
-![Image](./image//YmGp5Uzh4ag-HD.jpg)
+![Image](./assets//YmGp5Uzh4ag-HD.jpg)
 
 ### Link to Playlist: [All the Best](https://www.youtube.com/playlist?list=PLXQpH_kZIxTWUe-Ee-DZEX5gfeoo4tHV6)
 
@@ -241,6 +241,7 @@ func main(){
     }
 }
 ```
+
 </details>
 
 <details>
@@ -363,6 +364,7 @@ func main(){
 whoAmI("Aditya")
 }
 ```
+
 </details>
 
 <details>
@@ -379,6 +381,7 @@ package main
 
 import "fmt"
 
+
 func main(){
 
 	// Zero Values Init mai
@@ -388,34 +391,47 @@ func main(){
 
 	// println(len(nums))
 	nums[1] = 25;
+	nums[2] = 255;
 
-	println(nums[1])
+	// println(nums[1])
+	// println(nums[2])
 
+	// fmt.Println(len(nums))
 	// println(nums) // Gives error
-	fmt.Println(nums) // Works because of fmt lib
+	// fmt.Println(nums) // Works because of fmt lib
 
 	// False Values Init mai
 	var vals[4]bool
-	fmt.Println(vals)
+	// fmt.Println(vals)
 	vals[2] = true;
-	fmt.Println(vals)
+	// fmt.Println(vals)
 
 
 	// Strings
 	var names[3]string
-	fmt.Println(names)
+	// fmt.Println(names)
 	names[0] = "golang"
-	fmt.Println(names)
+	// 1st position is being skipped and not showed like Int or Bool.
+	names[2] = "Aditya"
+	// fmt.Println(names)
+	// Space is reserved but not being used and shadow is being returned.
+	// fmt.Println(len(names))
 
 	// Adding elements while declaration
-	number:=[3]int{1,2,3}
-	fmt.Println(number)
+	// number:=[3]int{1,2,3}
+	// fmt.Println(number)
 
+	// var name -> size of the arr -> type of arr > {values} -> cool hai
+	// num2 :=[4]int{4,56,6}
+	// fmt.Println(num2)
 
-	// 2D Arrays
+	// // 2D Arrays
 	numbers := [2][2]int{{1,2},{3,4}}
 	fmt.Println(numbers)
 
+	// 3D Arrays -> 3 times [2] means it is a 3D array and each array can have only 2 values 0th and 1st position. Play with it, then u can get it better.
+	num2 := [2][2][2]int{{{1,2},{1,3}},{{1,4},{2,4}}}
+	fmt.Println(num2)
 
 	// Usage:
 	// - fixed size arrays only
