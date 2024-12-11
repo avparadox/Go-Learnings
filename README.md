@@ -46,6 +46,7 @@ How to run the code:
 ```bash
 go run main.go
 ```
+
 </details>
 
 <details>
@@ -561,6 +562,7 @@ func main(){
 }
 
 ```
+
 ![Image](./assets//09/image.png)
 
 </details>
@@ -587,7 +589,7 @@ func main(){
 	// Defining an Element
 	m := make(map[string]string)
 	// fmt.Println(m)
-	
+
 	// Setting an Element
 	m["name"] = "Aditya"
 	m["surname"] = "Vyas"
@@ -604,7 +606,7 @@ func main(){
 
 	m2 := make(map[string]int)
 	m2["age"] = 21
-	m2["pincode"] = 777777 
+	m2["pincode"] = 777777
 	// String ->      , Int -> 0, Bool -> false
 	// fmt.Println(m2["age"], m2["phone_number"])
 
@@ -635,8 +637,52 @@ func main(){
 	fmt.Println(maps.Equal(m4,m5))
 }
 
-``` 
+```
+
 </details>
 
+<details>
+<summary>
+Chapter 11 - Range
+</summary>
 
+In this chapter, we will look upon Range in Golang which helps us in looping on a map or a variable or an array.
+
+Code Block:
+
+``` bash
+package main
+
+import (
+	"fmt"
+)
+
+func main()  {
+	 // Iterating over data structures.
+
+	 nums := []int{5,6,7,8}
+
+	//  for i:= 0; i <len(nums); i++{
+	// 	fmt.Println(nums[i])
+	//  }
+
+	for i, num := range nums{
+		fmt.Println(i, num)
+	}
+
+	// m:= map[string]string{"fname": "john", "lname": "doe"}
+
+	// for k,v := range m{
+	// 	fmt.Println(k,v)
+	// }
+
+	// Unicode | code point rune
+	// 0,1,2 it is not index. It is the start of Rune.
+	for i,c := range "golang"{
+		fmt.Println(i,string(c))
+	}
+}
+```
+
+</details>
 ## Happy Coding :)
