@@ -36,5 +36,4 @@ func main(){
 
 	fn := processIt()
 	fn(7)
-
 }
