@@ -650,7 +650,7 @@ In this chapter, we will look upon Range in Golang which helps us in looping on 
 
 Code Block:
 
-``` bash
+```bash
 package main
 
 import (
@@ -686,4 +686,57 @@ func main()  {
 
 </details>
 
+<details>
+<summary>
+Chapter 12 - Functions
+</summary>
+
+In this chapter we have learnt about Functions in Golang.
+
+Code Block:
+
+```bash
+package main
+
+import "fmt"
+
+func add(a,b int) int{
+	return a+b
+}
+
+func getLangauges()(string,string, int){
+	return "golang", "JS", 34
+}
+
+// func processIt(fn func(a int)int){
+// 	fn(1)
+// }
+
+func processIt() func(a int) int {
+	return func (a int) int {
+		return 4
+	}
+}
+
+
+func main(){
+
+	total := add(3,2)
+	fmt.Println(total)
+
+	// fmt.Println(getLangauges())
+	l1, l2 , _ := getLangauges()
+	fmt.Println(l1,l2)
+
+	// fn := func (a int ) int {
+	// 		return 2
+	// }
+
+	fn := processIt()
+	fn(7)
+
+}
+```
+
+</details>
 ## Happy Coding :)
