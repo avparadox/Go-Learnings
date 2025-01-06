@@ -772,4 +772,35 @@ func main(){
 ```
 </details>
 
+<details>
+<summary>
+Chapter 14 - Clousers
+</summary>
+
+In this chapter we learn about how Clousers in Golang.
+
+Code Block:
+
+```bash
+package main
+
+import "fmt"
+
+func counter() func() int {
+    var count int = 0
+
+    return func() int {
+        count += 1
+        return count
+    }
+}
+
+
+func main(){
+	increment := counter()
+    fmt.Println(increment())
+}
+```	
+</details>
+
 ## Happy Coding :)
