@@ -12,7 +12,7 @@ import "fmt"
 
 func changeNum(num *int){
 	
-	fmt.Println("Before In Change Function Call: ", *num)
+	fmt.Println("Before In Change Function Call: ", &num)
 	*num = 5
 	fmt.Println("In Num Change Value", *num)
 }
