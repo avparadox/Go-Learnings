@@ -31,8 +31,6 @@ func newOrder  (id string, amount float32, status string) *order {
 	return &myOrder
 }
 
-
-
 func main (){
 
 	order := struct {
@@ -118,8 +116,4 @@ func main (){
 	// fmt.Println(myOrder.status)
 	// fmt.Println(myOrder.getAmount())
 	// Phase 3 Ended
-
-
-
-
 }
