@@ -20,10 +20,12 @@ func main (){
 		amount: 100.00,
 		status: "Delivered",		
 	}
+	
+	// Phase 1 Started
+
 
 	// Created sepeartely
 	myOrder.createdAt = time.Now()
-
 	println("")
 	fmt.Println("Total Order Details: ", myOrder)
 	println("")
@@ -34,5 +36,20 @@ func main (){
 	fmt.Println("Order status: ", myOrder.status)
 	fmt.Println("Order createdAt: ", myOrder.createdAt)
 	println("")
+
+	// Phase 1 Ended
+
+	// Phase 2 Started
+
+	myOrder2 := order{
+		id : "2",
+		amount: 23,
+		status: "In Progress",
+		createdAt: time.Now(),
+	}
+
+	myOrder.amount = 266;
+	fmt.Println(myOrder)
+	fmt.Println(myOrder2)
 
 }
