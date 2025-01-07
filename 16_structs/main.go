@@ -16,12 +16,29 @@ func (o *order) changeStatus (status string){
 	o.status = status
 }
 
+// receiver type
 func (a order) getAmount () float32 {
 	return a.amount 
 }
 
+// Dynamic Instance creation of struct using Functions.
+func newOrder  (id string, amount float32, status string) *order {
+	myOrder := order{
+		id : id,
+		amount: amount,
+		status: status,		
+	}
+	return &myOrder
+}
+
+
 
 func main (){
+
+	myOrder :=  newOrder("1",22,"done")
+	// fmt.Println(newOrder("1",22, "Done"))
+	fmt.Println(myOrder.amount)
+
 
 	// If you don't set any of the fields, then default values are enforced on the print statement for the specific variable/object.
 
@@ -42,11 +59,11 @@ func main (){
 	// You can use the == operator to check if a variable of the above types is nil
 
 
-	myOrder := order{
-		id : "1",
-		// amount: 100.00,
-		status: "Delivered",		
-	}
+	// myOrder := order{
+	// 	id : "1",
+	// 	// amount: 100.00,
+	// 	status: "Delivered",		
+	// }
 	
 	// Phase 1 Started
 	// Created sepeartely
@@ -66,24 +83,24 @@ func main (){
 
 	// Phase 2 Started
 
-	myOrder2 := order{
-		id : "2",
-		amount: 23,
-		status: "In Progress",
-		createdAt: time.Now(),
-	}
+	// myOrder2 := order{
+	// 	id : "2",
+	// 	amount: 23,
+	// 	status: "In Progress",
+	// 	createdAt: time.Now(),
+	// }
 
 	// myOrder.amount = 266;
-	fmt.Println(myOrder)
-	fmt.Println(myOrder2)
+	// fmt.Println(myOrder)
+	// fmt.Println(myOrder2)
 
 	// Phase 2 Ended
 
 	// Phase 3
-	myOrder.changeStatus("Confirmed")
-	fmt.Println(myOrder)
-	fmt.Println(myOrder.status)
-	fmt.Println(myOrder.getAmount())
+	// myOrder.changeStatus("Confirmed")
+	// fmt.Println(myOrder)
+	// fmt.Println(myOrder.status)
+	// fmt.Println(myOrder.getAmount())
 	// Phase 3 Ended
 
 
