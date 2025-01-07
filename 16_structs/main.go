@@ -35,9 +35,25 @@ func newOrder  (id string, amount float32, status string) *order {
 
 func main (){
 
-	myOrder :=  newOrder("1",22,"done")
-	// fmt.Println(newOrder("1",22, "Done"))
-	fmt.Println(myOrder.amount)
+	order := struct {
+		id string
+		amount float32
+		status string
+	}{"1", 100, "Done"}
+
+	fmt.Println(order)
+
+	// langauge := struct{
+	// 	name string
+	// 	age float32
+	// }{"Adi", 21}
+
+	// fmt.Println(langauge)
+
+
+	// myOrder :=  newOrder("1",22,"done")
+	// // fmt.Println(newOrder("1",22, "Done"))
+	// fmt.Println(myOrder.amount)
 
 
 	// If you don't set any of the fields, then default values are enforced on the print statement for the specific variable/object.
