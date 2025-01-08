@@ -5,11 +5,17 @@ import (
 	"time"
 )
 
+type customer struct{
+	name string
+	phone string
+}
+
 type order struct {
 	id string
 	amount float32
 	status string
 	createdAt time.Time // It has a nano sec precision 
+	customer
 }
 
 func (o *order) changeStatus (status string){
@@ -33,13 +39,30 @@ func newOrder  (id string, amount float32, status string) *order {
 
 func main (){
 
-	order := struct {
-		id string
-		amount float32
-		status string
-	}{"1", 100, "Done"}
+	// newCustomer:= customer{
+	// 	name: "Adi",
+	// 	phone: "1234",
+	// }	
 
-	fmt.Println(order)
+	newOrder := order{
+		id: "23",
+		amount: 45,
+		status: "received",
+		// customer:newCustomer,
+		customer: customer{name: "Adi", phone: "124"},
+	}
+
+	fmt.Println(newOrder)
+	newOrder.customer.name = "Aditya"
+	fmt.Println(newOrder)
+	
+	// order := struct {
+	// 	id string
+	// 	amount float32
+	// 	status string
+	// }{"1", 100, "Done"}
+
+	// fmt.Println(order)
 
 	// langauge := struct{
 	// 	name string
