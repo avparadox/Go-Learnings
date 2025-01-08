@@ -848,6 +848,7 @@ func main(){
 	// fmt.Println("Location of number in memory", &number)
 }
 ```
+
 </details>
 
 <details>
@@ -859,8 +860,7 @@ In this chapter, we have learnt about Struct & we can Init it in different ways 
 
 Code Block:
 
-``` bash
-
+```bash
 package main
 
 import (
@@ -868,11 +868,17 @@ import (
 	"time"
 )
 
+type customer struct{
+	name string
+	phone string
+}
+
 type order struct {
 	id string
 	amount float32
 	status string
-	createdAt time.Time // It has a nano sec precision 
+	createdAt time.Time // It has a nano sec precision
+	customer
 }
 
 func (o *order) changeStatus (status string){
@@ -881,7 +887,7 @@ func (o *order) changeStatus (status string){
 
 // receiver type
 func (a order) getAmount () float32 {
-	return a.amount 
+	return a.amount
 }
 
 // Dynamic Instance creation of struct using Functions.
@@ -889,20 +895,37 @@ func newOrder  (id string, amount float32, status string) *order {
 	myOrder := order{
 		id : id,
 		amount: amount,
-		status: status,		
+		status: status,
 	}
 	return &myOrder
 }
 
 func main (){
 
-	order := struct {
-		id string
-		amount float32
-		status string
-	}{"1", 100, "Done"}
+	// newCustomer:= customer{
+	// 	name: "Adi",
+	// 	phone: "1234",
+	// }
 
-	fmt.Println(order)
+	newOrder := order{
+		id: "23",
+		amount: 45,
+		status: "received",
+		// customer:newCustomer,
+		customer: customer{name: "Adi", phone: "124"},
+	}
+
+	fmt.Println(newOrder)
+	newOrder.customer.name = "Aditya"
+	fmt.Println(newOrder)
+
+	// order := struct {
+	// 	id string
+	// 	amount float32
+	// 	status string
+	// }{"1", 100, "Done"}
+
+	// fmt.Println(order)
 
 	// langauge := struct{
 	// 	name string
@@ -921,7 +944,7 @@ func main (){
 
 	// Int -> 0
 	// String -> Empty space " "
-	
+
 	// 	In Go, nil represents the zero value for several types, including:
 	// Pointers: A pointer that doesn't point to anything is nil.
 	// Slices: An empty slice is represented by nil.
@@ -939,9 +962,9 @@ func main (){
 	// myOrder := order{
 	// 	id : "1",
 	// 	// amount: 100.00,
-	// 	status: "Delivered",		
+	// 	status: "Delivered",
 	// }
-	
+
 	// Phase 1 Started
 	// Created sepeartely
 	// myOrder.createdAt = time.Now()
@@ -982,5 +1005,4 @@ func main (){
 }
 ```
 </details>
-
 ## Happy Coding :)
