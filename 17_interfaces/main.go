@@ -2,13 +2,18 @@ package main
 
 import "fmt"
 
-type payment struct{}
+type paymenter interface{
+    pay(amount float32)
+}
+
+type payment struct{
+    gateway paymenter
+}
 
 func (p payment) makePayment (amount float32){
     // razorPaymentGw := razorPay{}
     // razorPaymentGw.pay(amount)
-    razorPaymentGw := stripe{}
-    razorPaymentGw.pay(amount)
+    p.gateway.pay(amount)
 }
 
 type razorPay struct{}
@@ -26,6 +31,10 @@ func (s stripe) pay  (amount float32){
 }
 
 func main()  {
-    newPayment := payment{}
+    // stripePaymentGw := stripe{}
+    razorPaymentGw := razorPay{}
+    newPayment := payment{
+        gateway: razorPaymentGw,
+    }
     newPayment.makePayment(100)
 }
