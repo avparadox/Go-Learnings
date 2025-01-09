@@ -1058,4 +1058,50 @@ func main()  {
 ```
 </details>
 
+<details>
+<summary>
+Chapter 18 - Enums
+</summary>
+
+In this chapter, we have learnt about Enums in Golang
+
+Code Blocl:
+```bash
+package main
+
+import "fmt"
+
+// enumrated types
+type orderStatus string 
+type orderStatusNum int
+const (
+	Received orderStatus = "recevied"
+	Confirmed 			 = "confirmed" 
+	Prepared			 = "prepared"
+	Delivered		 	 = "delivered"
+)
+
+const (
+	Received1 orderStatusNum = iota
+	Confirmed1 			  
+	Prepared1			 
+	Delivered1		 	 
+)
+
+func changeOrderStatus (status orderStatus) {
+	fmt.Println("Changing order status to", status)
+}
+
+func changeOrderStatusNum (status orderStatusNum) {
+	fmt.Println("Changing order status to", status)
+}
+
+func main(){
+	changeOrderStatus(Confirmed)
+	changeOrderStatusNum(Prepared1)
+}
+```
+
+</details>
+
 ## Happy Coding :)
