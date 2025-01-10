@@ -1188,4 +1188,38 @@ func main(){
 ```
 </details>
 
+<details>
+<summary>
+Chapter 20 Extension - Waitgroups
+</summary>
+
+In this chapter, we have added waitgroups for goroutines
+
+Code Block:
+```bash
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+func task (id int, w *sync.WaitGroup){
+	defer w.Done()
+	fmt.Println("Doing Task",id)
+}
+
+func main(){
+	var wg sync.WaitGroup
+	for i := 0; i <= 10; i++{
+		go func(i int){
+			wg.Add(1)
+			go task(i, &wg)
+		}(i)
+		wg.Wait()
+	}
+}
+```
+</details>
+
 ## Happy Coding :)
