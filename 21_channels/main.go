@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 //sending
 // func processNum (numChan chan int){
@@ -27,12 +24,11 @@ import (
 // 	fmt.Println("Processing...")
 // }
 
-
 //Email Channel
 // func emailSender(emailChan chan string, done chan bool){
 
 // 	defer func ()  {
-// 		done <- true	
+// 		done <- true
 // 	}()
 
 // 	for email := range emailChan{
@@ -42,6 +38,29 @@ import (
 // }
 
 func main(){
+
+	chan1 := make(chan int)
+	chan2 := make(chan string)
+
+	go func ()  {
+		chan1 <- 10	
+	}()
+
+	go func() {
+		chan2 <- "golang"
+	}()
+
+		for i := 0; i < 2; i++{
+			select{
+			case chan1Val := <- chan1:
+				fmt.Println("received data from chan1", chan1Val)
+			case chan2Val := <- chan2:
+				fmt.Println("received data from chan2", chan2Val)
+			}
+		}
+
+
+
 
 	// Email Channel
 	// emailChan := make(chan string, 100)
