@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	
-)
+import "fmt"
 
 //sending
 // func processNum (numChan chan int){
@@ -14,20 +11,33 @@ import (
 // }
 
 //receive
-func sum (result chan int, num1 int, num2 int){
-	finalResult := num1 + num2
-	result <- finalResult
-}
+// func sum (result chan int, num1 int, num2 int){
+// 	finalResult := num1 + num2
+// 	result <- finalResult
+// }
 
+// goroutine synchronizer
+func task (done chan bool){
+	defer func ()  {
+		done <- true	
+	}()
+	fmt.Println("Processing...")
+}
 
 func main(){
 
-	result := make(chan int)
-	go sum(result,4,5)
+	done := make(chan bool)
+	go task(done)
 
-	res := <- result // blocking
+	<- done // blocking
 
-	fmt.Println(res)
+
+	// result := make(chan int)
+	// go sum(result,4,5)
+
+	// res := <- result // blocking
+
+	// fmt.Println(res)
 
 	// numChan := make(chan int)
 	// go processNum(numChan)
