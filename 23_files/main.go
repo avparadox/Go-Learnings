@@ -61,13 +61,26 @@ func main(){
 
 	// read file - 2nd Method
 	// should use only for small size of files
-	data, err := os.ReadFile("example.txt")
+	// data, err := os.ReadFile("example.txt")
+	// if err != nil{
+	// 	panic(err)
+	// }
+
+	// fmt.Println(string(data))
+
+
+	// reading folders
+
+	dir, err := os.Open("../")
 	if err != nil{
 		panic(err)
 	}
 
-	fmt.Println(string(data))
+	defer dir.Close()
 
+	fileInfo, err := dir.ReadDir(0)
 
-
+	for _, fi := range fileInfo{
+		fmt.Println(fi.Name(), fi.IsDir())
+	}
 }
