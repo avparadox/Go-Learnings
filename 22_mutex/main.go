@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"sync"
 )
-
 type post struct{
 	views int
 	mu sync.Mutex
@@ -12,10 +11,12 @@ type post struct{
 
 
 func (p *post) inc(wg *sync.WaitGroup){
-	defer wg.Done()
+	defer func ()  {	
+	p.views += 1;
+	wg.Done()	
+	}()
 
 	p.mu.Lock()
-	p.views += 1;
 	p.mu.Unlock()
 }
 
