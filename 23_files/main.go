@@ -18,7 +18,11 @@ func main(){
 		panic(err)
 	}
 
-	fmt.Println(fileInfo.Name())
+	fmt.Println("file name: ", fileInfo.Name())
+	fmt.Println("file true or dir false: ",fileInfo.IsDir())
+	fmt.Println("file size: ",fileInfo.Size(), " bytes")
+	fmt.Println("file permissions: ",fileInfo.Mode())
+	fmt.Println("file modified: ",fileInfo.ModTime())
 
 
 }
