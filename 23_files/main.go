@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 )
 
@@ -40,22 +41,33 @@ func main(){
 	// fmt.Println("file permissions: ",fileInfo.Mode())
 	// fmt.Println("file modified: ",fileInfo.ModTime())
 
-	// read file
-	f, err := os.Open("example.txt")
+	// read file - 1st Method
+	// f, err := os.Open("example.txt")
+	// if err != nil{
+	// 	panic(err)
+	// }
+
+	// defer f.Close()
+
+	// buff := make([]byte, 110)
+	// d, err := f.Read(buff)
+	// if err != nil{
+	// 	panic(err)
+	// }
+
+	// for i := 0 ; i < len(buff) ; i++{
+	// 	println("data", d,string(buff[i]))
+	// }
+
+	// read file - 2nd Method
+	// should use only for small size of files
+	data, err := os.ReadFile("example.txt")
 	if err != nil{
 		panic(err)
 	}
 
-	defer f.Close()
+	fmt.Println(string(data))
 
-	buff := make([]byte, 110)
-	d, err := f.Read(buff)
-	if err != nil{
-		panic(err)
-	}
 
-	for i := 0 ; i < len(buff) ; i++{
-		println("data", d,string(buff[i]))
-	}
 
 }
