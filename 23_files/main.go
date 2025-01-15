@@ -138,7 +138,4 @@ func main(){
 	os.Remove("example2.txt")
 
 	fmt.Println("file removed")
-
-
-
 }
