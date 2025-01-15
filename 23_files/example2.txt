@@ -1,0 +1,5 @@
+hello golang!
+
+i hope you are doing well.
+
+you are an amazing language and i am happy i am learning about you.
