@@ -92,8 +92,24 @@ func main(){
 
 	// f.WriteString("hi golang!")
 
-	bytes := []byte("Hello Go")
-	f.Write(bytes)
+	// bytes := []byte("Hello Go")
+	// f.Write(bytes)
+
+	// read and write to another file (streaming fashion)
+	sourceFile, err := os.Open("example.txt")
+	if err != nil{
+		panic(err)
+	}
+
+	defer sourceFile.Close()
+
+	destFile, err := os.Create("example2.txt")
+	if err != nil{
+		panic(err)
+	}
+
+	defer destFile.Close()
+
 
 
 }
