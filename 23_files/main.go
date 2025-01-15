@@ -90,7 +90,10 @@ func main(){
 	}
 	defer f.Close()
 
-	f.WriteString("hi golang!")
+	// f.WriteString("hi golang!")
+
+	bytes := []byte("Hello Go")
+	f.Write(bytes)
 
 
 }

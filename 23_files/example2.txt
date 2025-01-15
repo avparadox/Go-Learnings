@@ -1,1 +1,1 @@
-hi golang!
+Hello Go
