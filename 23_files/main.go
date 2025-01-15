@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bufio"
+	"fmt"
 	"os"
 )
 
@@ -110,6 +112,27 @@ func main(){
 
 	defer destFile.Close()
 
+	reader := bufio.NewReader(sourceFile)
+	writer := bufio.NewWriter(destFile)
+
+	for {
+		b, err := reader.ReadByte()
+		if err != nil{
+			if err.Error() != "EOF"{
+				panic(err)
+			}
+			break
+		}
+
+		e := writer.WriteByte(b)
+		if err != nil{
+			panic(e)
+		}
+	}
+
+	writer.Flush()
+
+	fmt.Println("Written to new file successfully!")
 
 
 }
