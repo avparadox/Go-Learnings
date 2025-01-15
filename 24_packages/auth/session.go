@@ -1,5 +1,9 @@
 package auth
 
 func GetSession() string {
-	return "loggedIn"
+	return extractSession()
+}
+
+func extractSession() string {
+	return "extract"
 }
