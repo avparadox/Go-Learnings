@@ -1542,4 +1542,15 @@ func main(){
 ```
 </details>
 
+<details>
+<summary>
+Chapter 24 - Packages
+</summary>
+
+In this chapter we have learnt about Public, Private & External Packages.
+
+For more details please visit 24_packages folder.
+
+</details>
+
 ## Happy Coding :)
