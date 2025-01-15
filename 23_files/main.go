@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 )
 
@@ -133,7 +134,11 @@ func main(){
 	// fmt.Println("Written to new file successfully!")
 
 	// Deleting a file
-		
+
 	os.Remove("example2.txt")
+
+	fmt.Println("file removed")
+
+
 
 }
