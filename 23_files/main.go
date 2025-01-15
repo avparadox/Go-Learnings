@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -71,16 +70,27 @@ func main(){
 
 	// reading folders
 
-	dir, err := os.Open("../")
+	// dir, err := os.Open("../")
+	// if err != nil{
+	// 	panic(err)
+	// }
+
+	// defer dir.Close()
+
+	// fileInfo, err := dir.ReadDir(0)
+
+	// for _, fi := range fileInfo{
+	// 	fmt.Println(fi.Name(), fi.IsDir())
+	// }
+
+	// writing in files
+	f, err := os.Create("example2.txt")
 	if err != nil{
 		panic(err)
 	}
+	defer f.Close()
 
-	defer dir.Close()
+	f.WriteString("hi golang!")
 
-	fileInfo, err := dir.ReadDir(0)
 
-	for _, fi := range fileInfo{
-		fmt.Println(fi.Name(), fi.IsDir())
-	}
 }
