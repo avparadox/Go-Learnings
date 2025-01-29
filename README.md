@@ -1,8 +1,6 @@
 # Coder's Gyan Golang Series
 
-![Image](./assets//YmGp5Uzh4ag-HD.jpg)
-
-### Link to Playlist: [All the Best](https://www.youtube.com/playlist?list=PLXQpH_kZIxTWUe-Ee-DZEX5gfeoo4tHV6)
+[![Video Thumbnail](./assets//YmGp5Uzh4ag-HD.jpg)](https://www.youtube.com/playlist?list=PLXQpH_kZIxTWUe-Ee-DZEX5gfeoo4tHV6)
 
 ## Notes
 
